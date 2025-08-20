@@ -1,0 +1,651 @@
+/* Estilo general para el documento */
+html, body {
+    height: 100%; /* Aseguramos que el html y body ocupen toda la altura */
+    margin: 0; /* Sin margen por defecto */
+    padding: 0; /* Sin padding por defecto */
+}
+
+/* Estilo para el html */
+html {
+    scroll-behavior: smooth;
+}
+  
+/* Estilo para el body */
+body {
+    display: flex; /* Flexbox para centrar el contenido */
+    flex-direction: column; /* Colocamos el contenido en columnas */
+    min-height: 100vh; /* Aseguramos que el body ocupe toda la altura de la ventana */
+    font-family: 'Nunito', sans-serif; /* Fuente de Google Fonts */
+    line-height: 1; /* Espaciado entre líneas */
+    font-size: 18px; /* Tamaño de fuente base */
+    background-color: #f9f9f9; /* Color de fondo */
+    color: #333; /* Color de texto */
+    padding: 30px 20px; /* Aquí agregamos espacio alrededor, incluido arriba */
+    box-sizing: border-box; /* Para incluir el padding en el tamaño total */
+    grid-template-rows: auto 1fr auto; /* Para asegurar que el footer esté al final */
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/29/09/08/abstract-1868720_1280.jpg'); /* Fondo con imagen */
+}
+
+/* Estilo para el contenedor principal */
+main {
+    flex: 1; /* Para que el main ocupe el espacio restante */
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    padding: 10px 0;
+    margin-top: 30px;   /* espacio con el contenido superior */
+    margin-bottom: 20px; /* espacio con el borde inferior de la ventana */
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+}
+
+.icono {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+h2 {
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #005599;
+    margin-top: 20px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* Estilo para el contenedor de la tarjeta */
+.foto-perfil { /* Contenedor de la imagen de perfil */
+    display: flex; /* Flexbox para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 20px; /* Espacio entre la imagen y el título */
+    padding: 20px; /* Espacio alrededor de la imagen */
+}
+
+/* Estilo para la imagen de perfil */ 
+.foto-perfil img {
+    width: 200px; /* Cambié el tamaño a 200px */
+    height: 200px; /* Cambié el tamaño a 200px */
+    border-radius: 10%; /* Para hacer la imagen circular */
+    object-fit: cover; /* Para que la imagen se ajuste bien al contenedor */
+    border: 4px solid #fff; /* Borde blanco */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra suave */
+    transition: box-shadow 0.3s ease; /* Transición suave al hacer hover */
+    margin: 0 auto; /* Centrar la imagen */
+}
+
+/* Efecto de sombra al pasar el mouse */
+.foto-perfil img:hover { /* Efecto al pasar el mouse */
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6);  /* Sombra más intensa al hacer hover */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al hacer hover */
+}
+  
+/* Estilo para el contenedor del nombre y título */
+.nombre-titulo {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* Estilo para el nombre y título */
+.nombre-titulo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 40px; /* más separación entre el nombre y técnico electricista */
+}
+
+/* Estilo para el título */
+.nombre-titulo h2 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 8px 0; /* separación entre h2 */
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+/* Efecto de transición para el nombre y título */
+.nombre-titulo h1,
+.nombre-titulo h2 {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto de hover para el nombre y título */
+.nombre-titulo h1:hover,
+.nombre-titulo h2:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.card-section h3 {
+    color: #005599; /* o el color de tu parte derecha */
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.card-section.izquierda h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-section h2 {
+    color:rgba(206, 47, 26, 0.54);
+}
+
+.card-section {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.formacion-item {
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.formacion-item h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #005599;
+}
+
+.formacion-item p {
+    margin: 5px 0 0 0;
+}
+
+.experiencia-item {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid #eee; /* o #ccc si quieres más contraste */
+}
+
+.card-section.idiomas,
+.card-section.habilidades,
+.card-section.intereses,
+.card-section.contacto,
+.card-section.perfil {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: white;
+}
+
+.card-section ul {
+    padding-left: 20px;
+}
+
+.card-section.izquierda {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea blanca semitransparente */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+  
+.card-section ul li {
+    margin-bottom: 8px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* para que las columnas estén una al lado de la otra */
+    flex-wrap: nowrap; /* que no se envuelvan en pantallas anchas */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* centramos el contenedor */
+    gap: 0; /* Quitamos separación */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Opcional: sombra general */
+}
+
+@media print {
+    .container {
+        display: block !important;
+    }
+}
+
+.columna-izquierda {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */      
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 0px;
+    max-width: 280px;
+    background-color: #00838F; /* un turquesa intermedio, más oscuro que antes #006D77*/
+    background-image:
+        url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'),
+        linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* un toque más claro */
+    background-blend-mode: lighten;
+    background-repeat: repeat;
+    width: 35%;
+}
+
+.columna-izquierda h3,
+.columna-izquierda p,
+.columna-izquierda li {
+    text-align: center;
+    color: inherit;
+}
+
+.columna-izquierda .icono {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+
+.columna-derecha {
+    flex: 2;
+    background-color: #fff;
+    width: 65%;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.1); /* línea sutil */    
+}
+
+/* Título de la sección */
+.columna-derecha h2 {
+    color: #0099b4; /* azul turquesa */
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0099b4;
+}
+
+/* Efecto de sombra al pasar el mouse */
+.columna-derecha h2 {
+    color: #0099b4;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0099b4;
+    transition: all 0.3s ease-in-out; /* TRANSICIÓN SUAVE */
+}
+
+/* Efecto de hover para el título */
+.columna-derecha h2:hover {
+    transform: scale(1.04);
+    text-shadow: 0 0 6px rgba(0, 153, 180, 0.5); /* RESPLANDOR SUAVE AZUL */
+}
+  
+/* Trabajo individual */
+.trabajo {
+    margin-bottom: 30px;
+}
+
+.trabajo .periodo {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trabajo .titulo {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #003366;
+    margin: 5px 0;
+}
+
+.trabajo .empresa {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.trabajo ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.trabajo ul li {
+    margin-bottom: 5px;
+}
+
+/* Para que tu CV se adapte correctamente a dispositivos móviles */
+/* Estilo para la sección de habilidades */
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .columna-izquierda,
+    .columna-derecha {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 20px;
+    }
+}
+  
+/* Estilo para la tarjeta única */
+.tarjeta-unica {
+    background-color: #006D77; /* o #004d66 o #003f5c si quieres más oscuro */
+    color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.tarjeta-unica h1,
+.tarjeta-unica h2,
+.tarjeta-unica h3,
+.tarjeta-unica p,
+.tarjeta-unica li 
+.tarjeta-unica strong {
+    color: white;
+}
+
+.tarjeta-unica h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.tarjeta-unica ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.columna-izquierda ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.columna-izquierda ul li {
+    margin-bottom: 6px;
+}
+
+.tarjeta-unica .perfil {
+    all: unset;
+}
+
+.tarjeta-unica .perfil h3,
+.tarjeta-unica .perfil p {
+    color: white;
+    text-align: center;
+}
+
+.funciones-lista {
+    margin-top: 10px;
+    padding-left: 20px; /* o lo que necesites */
+}
+
+.funciones-lista li {
+    margin-bottom: 6px;
+
+}
+
+.barra-lateral {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 15px 10px;
+    border-radius: 0 8px 8px 0;
+    z-index: 999;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+
+    /* Igual que la columna izquierda */
+    background-color: #00838F;
+    background-image: 
+        url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'),
+        linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background-blend-mode: lighten;
+    background-repeat: repeat;
+    font-family: 'Nunito', sans-serif;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-lateral li {
+    margin: 12px 0;
+}
+
+.barra-lateral a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.barra-lateral a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffee58;
+    text-shadow: 0 0 6px #ffee58;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    background-color: #00838F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+  
+@media screen and (max-width: 768px) {
+    .barra-lateral {
+      display: none;
+    }
+    .barra-lateral.visible {
+      display: block;
+    }
+    .menu-toggle {
+      display: block;
+    }
+}
+
+.seccion-animada {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+  
+.seccion-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.formacion-item, .experiencia-item {
+    display: block !important;
+    opacity: 1 !important;
+    color: black !important;
+}
+
+#descargar-pdf {
+    background-color: #0099b4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+#descargar-pdf:hover {
+    background-color: #007a95;
+}
+
+.bloque-identidad {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    page-break-after: avoid;
+}
+
+/* Evitar saltos de página en secciones específicas */
+.page-break {
+    display: none;
+}
+
+@media print {
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+  
+    body {
+      background: white !important;
+      color: black !important;
+      font-size: 14px;
+      box-shadow: none !important;
+    }
+  
+    .barra-lateral,
+    .menu-toggle,
+    footer {
+      display: none !important;
+    }
+  
+    .container {
+        display: block !important;
+        flex-direction: column !important;
+    }
+  
+    .columna-izquierda,
+    .columna-derecha {
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .columna-izquierda {
+        height: auto !important;
+        min-height: auto !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .foto-perfil img {
+        max-width: 100px !important;
+        height: auto !important;
+        margin-bottom: 10px !important;
+        page-break-inside: avoid !important;
+        object-fit: cover !important;
+    }
+  
+    h1, h2, h3 {
+      color: black !important;
+      page-break-inside: avoid !important;
+    }
+  
+    .bloque-identidad,
+    .nombre-titulo,
+    .foto-perfil,
+    .card-section,
+    .formacion-item,
+    .experiencia-item,
+    .funciones-lista {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      page-break-after: auto !important;
+      page-break-before: auto !important;
+    }
+  
+    .experiencia-item h3,
+    .experiencia-item p,
+    .experiencia-item ul,
+    .experiencia-item ul li {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+  
+    .card-section ul {
+      page-break-inside: avoid !important;
+    }
+
+    .page-break {
+        display: block;
+        page-break-before: always;
+    }
+
+    .page-break-print {
+        display: block;
+        page-break-before: always !important;
+        break-before: page !important;
+    }
+    
+    #descargar-pdf {
+        display: none !important;
+    }
+    
+    .container::after {
+        content: "";
+        display: block;
+        clear: both;
+    }    
+}
+
+.no-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+}
+
+@page {
+    margin: 20mm 15mm;
+}
+/* Fin del CSS */  
