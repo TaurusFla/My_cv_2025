@@ -135,7 +135,7 @@ $proyectos = [
     'titulo' => 'CV Web Responsive',
     'resumen' => 'CV en dos columnas con impresión a PDF y componentes reutilizables (header/footer); datos desacoplados en includes.',
     'tecnologias' => 'HTML5, CSS3, PHP',
-    'repo' => '' // añadiremos tu GitHub después
+    'repo' => 'https://github.com/TaurusFla/My_cv_2025.git'
   ],
   [
     'titulo' => 'Mini-CRUD de Posts',
